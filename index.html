@@ -17,7 +17,7 @@
   <script src='/socket.io/socket.io.js'></script>
   <script>
   $(function(){
-    var socket = io();
+    var socket = io('http://achatjunction.herokuapp.com/');
     var nickname = prompt("What is your nickname?");
     socket.emit('join',nickname);
 
