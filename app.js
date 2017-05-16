@@ -34,7 +34,7 @@ http.listen(3000,function(){
 // app.get('/',function(req,res){
 //     res.sendfile(__dirname +  "/index.html");
 // });
-// app.listen(3000,function(){
+// app.listen(process.env.PORT||3000,function(){
 //   console.log("server running");
 // });
 // makeRequestInApp("Looking ");
