@@ -14,10 +14,9 @@ var io = require('socket.io')(http);
  io.on('connection',function(socket){
    socket.on('join',function(nickname){
      socket.nickname=nickname;
-
+     socket.broadcast.emit('uconnected',nickname + " connected");  
      console.log(socket.nickname+' connected');
    });
-   socket.emit('notification',{content:"All users are notified"});
    socket.on('chat message',function(msg){
       io.emit('chat message',socket.nickname+": "+ msg);
    });
